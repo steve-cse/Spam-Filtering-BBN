@@ -1,4 +1,5 @@
-from flask import Flask,render_template,request
+import os
+from flask import Flask,render_template,request,send_from_directory
 import cloudpickle as cp
 from urllib.request import urlopen
 
@@ -6,6 +7,9 @@ app=Flask(__name__)
 
 model=cp.load(urlopen('https://raw.githubusercontent.com/steve-cse/Spam-Filtering-BN/master/SFBN.pkl'))
 cv=cp.load(urlopen('https://raw.githubusercontent.com/steve-cse/Spam-Filtering-BN/master/vectorizer.pkl'))
+@app.route("/favicon.ico")
+def favicon():
+	return send_from_directory(os.path.join(app.root_path, 'static'),'favicon.ico',mimetype='image/vnd.microsof.icon')
 
 @app.route('/')
 def home():
@@ -23,4 +27,4 @@ def predict():
     return render_template('index.html', **locals())
 
 if __name__=='__main__':
-    app.run(debug=True)
+    app.run()
