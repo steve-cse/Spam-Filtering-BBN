@@ -25,4 +25,4 @@ These instructions will get you a copy of the project up and running on your loc
 This project is open for contributions. Feel free to fork the repository, make changes, and create a pull request.
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
