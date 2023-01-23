@@ -19,7 +19,7 @@ These instructions will get you a copy of the project up and running on your loc
 
  2. Install the required packages:
 
- - `git clone pip install -r requirements.txt`
+ - `pip install -r requirements.txt`
 
  ## Contributions
 This project is open for contributions. Feel free to fork the repository, make changes, and create a pull request.
